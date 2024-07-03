@@ -1,6 +1,7 @@
   .newest-anime-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: 76vw;
     margin: 1vw;
     border: solid 5px black;
@@ -18,7 +19,7 @@
   
   .newest-anime {
     text-align: center;
-    margin: 10px;
+    margin: 15px;
   }
   
   .newest-anime-image {
@@ -31,6 +32,15 @@
   .newest-anime-title {
     font-size: 1.2em;
     margin-top: 10px;
+  }
+
+  @media (max-width: 480px){
+    .newest-anime-container{
+      width: 66vw;
+      margin-left: 3vw;
+      margin-right: 3vw;
+   
+    }
   }
 
 

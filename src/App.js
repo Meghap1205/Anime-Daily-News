@@ -67,7 +67,7 @@ const App = () => {
         )}
       </div>
       <div>
-        <div className='title2'> <h1 >Top 10 Anime</h1></div>
+        <div className='title2'> <h1 >Top 10 Most Favorite Anime</h1></div>
         <TopAnimeList />
       </div>
       <div>
@@ -79,10 +79,12 @@ const App = () => {
           </div>
         </div>
         <NewestAnime />
-        <div className="footer">
+        
+      </div>
+      
+      <div className="footer">
           copy write @2024
         </div>
-      </div>
     </div>
   );
 };

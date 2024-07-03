@@ -72,3 +72,20 @@
   h2{
     color: black;
   }
+
+  @media (max-width: 480px){
+    .news-list::before{
+      left: 10vw;
+      font-size: 2rem;
+      width: 25vw;
+      height: 5vh;
+    }
+    .news-list{
+      width: 76vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    }
+
+    
+   
+  }

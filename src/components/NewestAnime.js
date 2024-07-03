@@ -8,11 +8,10 @@ const NewestAnime = () => {
   useEffect(() => {
     const fetchNewestAnime = async () => {
       try {
-        const response = await axios.get('https://api.jikan.moe/v4/anime', {
+        const response = await axios.get('https://api.jikan.moe/v4/top/anime', {
           params: {
-            order_by: 'rank',
-            sort: 'desc',
-            limit: 2,
+            filter: "bypopularity", 
+            limit: 10,
           },
         });
 

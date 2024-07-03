@@ -2,10 +2,11 @@
 .skeleton {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     background: url(../public/background.png);
     width: 94vw;
     border: solid 5px black;
-    margin: 2vw;
+    margin: 1vw;
     gap: 1rem;
     padding: 10px;
     justify-content: space-between;
@@ -20,5 +21,53 @@
     height: 60vh;
     background-color: white;
     border-radius: 4px;
+  }
+
+  
+  .skeleton::before {
+    position: absolute;
+    content: 'News';
+    font-weight: bold;
+    font-size: 4rem;
+    color: white;
+    background-color: #c18bee;
+    border: solid 5px black;
+    border-bottom: solid 10px black;
+    border-right: solid 10px black;
+    border-radius: 5px;
+    top: 5vh;
+    left: 1vw;
+    width: 10vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-15deg); /* Rotate by 30 degrees */
+    text-shadow:    
+    2px -2px 0 #000,
+    -3px -3px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+    z-index: 2;
+  }
+
+  @media (max-width: 480px){
+    .skeleton::before{
+      left: 15vw;
+      font-size: 2rem;
+      width: 25vw;
+      height: 5vh;
+      top: 15vh;
+    }
+    .skeleton{
+      width: 76vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    flex-direction: column;
+   align-items: center;
+    }
+    .skeleton-item {
+      width: 60vw;
+    }
   }
   

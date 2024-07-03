@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .news-list {
@@ -195,4 +197,55 @@ h1{
     4px 4px 0 #000;
   margin-left: auto; /* Center the footer container */
   margin-right: auto; /* Center the footer container */
+}
+
+@media (max-width: 480px){
+  h1{
+    font-size: 20px;
+    
+  }
+  .title .date{
+    font-size: 15px;
+    width: 17vw;
+    top: 1vh;
+    left: 1vw;
+  }
+  .title2::after{
+    display: none;
+  }
+  .title2{
+    height: 7vh;
+    width: 87vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    align-items: center;
+    font-size: 4rem;
+    text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    2px 2px 0 #000; 
+    letter-spacing: 0.1rem;
+    justify-content: center;
+    padding: none;
+
+  }
+
+  .title3, .footer{
+    width: 87vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-size: 4rem;
+    text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    2px 2px 0 #000; 
+    letter-spacing: 0.1rem;
+  }
+  .footer{
+    font-size: 1rem;
+  }
+
+ 
 }

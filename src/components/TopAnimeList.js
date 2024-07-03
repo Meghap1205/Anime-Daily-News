@@ -10,7 +10,9 @@ const TopAnimeList = () => {
       try {
         const response = await axios.get('https://api.jikan.moe/v4/top/anime', {
           params: {
-            limit: 10, // Fetch top 10 anime
+            // Fetch top 10 anime
+            filter: "favorite",
+            limit: 10,
           },
         });
 
