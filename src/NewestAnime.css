@@ -1,0 +1,36 @@
+  .newest-anime-container {
+    display: flex;
+    justify-content: space-around;
+    width: 76vw;
+    margin: 1vw;
+    border: solid 5px black;
+    border-radius: 5px;
+    border-top: solid 10px black;
+    border-bottom: solid 10px black;
+    position: relative;
+    padding: 10vw; 
+    background: url('../public/title3.png');
+    background-size: cover; 
+  background-position: center; 
+    margin-top: 2vw;
+
+  }
+  
+  .newest-anime {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .newest-anime-image {
+    width: 200px;
+  height: 250px;
+  object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .newest-anime-title {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+
+ 

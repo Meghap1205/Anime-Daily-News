@@ -1,0 +1,74 @@
+.article-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2vw;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden; /* Ensure content fits within the container */
+    width: 100%;
+  }
+  
+  .article-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Prevent long text from overflowing */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .article-description {
+    font-size: 1em;
+    color: #333;
+  
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  }
+  
+  .news-list{
+    background: url('/public/background.png') ;
+    background-size: cover;
+  background-position: center; 
+    width: 94vw;
+    border: solid 5px black;
+    border-top: solid 10px black;
+    border-bottom: solid 10px black;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .news-list::before {
+    position: absolute;
+    content: 'News';
+    font-weight: bold;
+    font-size: 4rem;
+    color: white;
+    background-color: #c18bee;
+    border: solid 5px black;
+    border-bottom: solid 10px black;
+    border-right: solid 10px black;
+    border-radius: 5px;
+    top: 5vh;
+    left: 1vw;
+    width: 10vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-15deg); /* Rotate by 30 degrees */
+    text-shadow:    
+    2px -2px 0 #000,
+    -3px -3px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+    z-index: 2;
+  }
+  .news-item{
+    height: 60vh;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  h2{
+    color: black;
+  }
