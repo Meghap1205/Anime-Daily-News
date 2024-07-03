@@ -1,12 +1,15 @@
+// App.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NewsList from './components/NewsList';
 import TopAnimeList from './components/TopAnimeList';
 import NewestAnime from './components/NewestAnime';
+import Skeleton from './components/Skeleton';
 import './App.css';
 
 const App = () => {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -14,7 +17,7 @@ const App = () => {
         const response = await axios.get('https://newsapi.org/v2/everything', {
           params: {
             q: 'anime',
-            apiKey: '5be2a671a349417b8c3b307bb976844d',
+            apiKey: process.env.REACT_APP_NEWS_API_KEY,
             language: 'en',
             sortBy: 'publishedAt',
             pageSize: 20,
@@ -34,8 +37,10 @@ const App = () => {
           }));
 
         setArticles(items.slice(0, 8));
+        setLoading(false); // Set loading to false after articles are fetched
       } catch (error) {
         console.error('Error fetching anime news:', error);
+        setLoading(false); // Handle error and set loading to false
       }
     };
 
@@ -53,13 +58,16 @@ const App = () => {
   return (
     <div className="App">
       <div className='title'>
-        <span class="date"></span>
+        <span className="date"></span>
         <h1>Anime Daily News</h1>
-        <NewsList articles={articles} />
+        {loading ? (
+          <Skeleton /> // Show skeleton while loading
+        ) : (
+          <NewsList articles={articles} />
+        )}
       </div>
       <div>
         <div className='title2'> <h1 >Top 10 Anime</h1></div>
-
         <TopAnimeList />
       </div>
       <div>
@@ -70,7 +78,6 @@ const App = () => {
             <h1>Most Popular Anime</h1>
           </div>
         </div>
-
         <NewestAnime />
         <div className="footer">
           copy write @2024
