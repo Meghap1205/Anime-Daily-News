@@ -1,26 +1,28 @@
 /* Skeleton.css */
 .skeleton {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background: url(../public/background.png);
-    width: 94vw;
-    border: solid 5px black;
-    margin: 1vw;
-    gap: 1rem;
-    padding: 10px;
-    justify-content: space-between;
-    background-size: cover;
-  background-position: center; 
-    border-radius: 5px;
+  background: url('/public/background.png') ;
+  background-size: cover;
+background-position: center; 
+  width: 94vw;
+  border: solid 5px black;
+  border-top: solid 10px black;
+  border-bottom: solid 10px black;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   }
 
   .skeleton-item {
-    margin: 2vh;
-    width: 30vw;
     height: 60vh;
+    width: 18vw;
+    margin: 2vw;
+    overflow: hidden;
+    text-decoration: none;
     background-color: white;
-    border-radius: 4px;
+    border-radius: 5px;
   }
 
   
@@ -53,21 +55,23 @@
 
   @media (max-width: 480px){
     .skeleton::before{
-      left: 15vw;
+      left: 10vw;
       font-size: 2rem;
       width: 25vw;
       height: 5vh;
-      top: 15vh;
     }
     .skeleton{
-      width: 76vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
+      width: 86vw;
+      margin-left: 1vw;
+      margin-right: 1vw;
+    display: flex;
+    align-items: center;
     flex-direction: column;
-   align-items: center;
+    flex-wrap: wrap;
+  
     }
     .skeleton-item {
-      width: 60vw;
+      width: 70vw;
     }
   }
   

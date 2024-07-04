@@ -20,6 +20,7 @@
   .newest-anime {
     text-align: center;
     margin: 15px;
+    overflow: hidden;
   }
   
   .newest-anime-image {
@@ -30,8 +31,10 @@
   }
   
   .newest-anime-title {
+    width: 200px;
     font-size: 1.2em;
     margin-top: 10px;
+    text-overflow: clip;
   }
 
   @media (max-width: 480px){
