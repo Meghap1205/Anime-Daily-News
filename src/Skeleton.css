@@ -13,6 +13,7 @@ background-position: center;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  
   }
 
   .skeleton-item {
@@ -23,6 +24,11 @@ background-position: center;
     text-decoration: none;
     background-color: white;
     border-radius: 5px;
+    color: gray;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   

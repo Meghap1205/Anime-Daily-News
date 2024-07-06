@@ -20,7 +20,8 @@ const App = () => {
             apiKey: process.env.REACT_APP_NEWS_API_KEY,
             language: 'en',
             sortBy: 'publishedAt',
-            pageSize: 20,
+            pageSize: 30,
+        
           },
         });
 
@@ -81,6 +82,7 @@ const App = () => {
         <NewestAnime />
         
       </div>
+     
       
       <div className="footer">
           copy write @2024
